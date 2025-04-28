@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 con AJAX</title>
+</head>
+<body>
+    <button onclick="enviarSolicitud()">Enviar AJAX</button>
+    <h1 id="titulo"></h1>
+
+    <script>
+        function enviarSolicitud() {
+            var theObject = new XMLHttpRequest();
+            theObject.open('POST', 'backend.php', true);
+            theObject.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            theObject.onreadystatechange = function () {
+                document.getElementById('titulo').innerHTML = theObject.responseText;
+            };
+            theObject.send();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 5 - Suma de dos Numeros</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Ejemplo 5 - Suma de dos Numeros</h1>
+            <form class="form" action="backend.php" method="post">
+                <div class="form-group">
+                    <label for="num1">Numero A</label>
+                    <input class="form-control" type="text" name="num1" id="num1"> +
+                </div>
+                <div class="form-group">
+                    <label for="num2">Numero B</label>
+                    <input class="form-control" type="text" name="num2" id="num2">
+                </div>
+                <input class="btn btn-primary" type="button" value="Sumar" id="btnSumar">
+            </form>
+        </div>
+        <div>
+            <div class="badge badge-primary" id="resultado"></div>
+        </div>
+    </div>
+</body>
+</html>
